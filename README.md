@@ -7,6 +7,7 @@ This repository was developed in mind of learning cool stuffs like esbuild, roll
 - [x] ESBuild - bye babel 👋
 - [x] Fastify
 - [x] pnpm
+- [x] Typescript
 
 ## Scripts
 
