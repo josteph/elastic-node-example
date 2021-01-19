@@ -1,9 +1,19 @@
-# fastify-starter
+# Node Elastic Example
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/fastify/fastify-starter-codesandbox.svg)](https://greenkeeper.io/)
+This repository was developed in mind of learning cool stuffs like esbuild, rollup, fastify, and elasticsearch.
 
-A starter template for creating an HTTP Fastify server with JavaScript. It includes example routes that demonstrate some of the basic features of Fastify. It also comes with unit tests powered by [tap](https://node-tap.org).
+## Features
 
-Codesandbox currently does not support custom eslint overrides; thus, `/* eslint strict: "off" */` is included at the top of each file to ignore the `strict` warning. If you use this template outside of Codesandbox, the eslint configuration within `package.json` will properly set the `sourceType`, which means you can remove these comments as no warnings will be produced.
+- [x] ESBuild - bye babel 👋
+- [x] Fastify
+- [x] pnpm
 
-Learn more about fastify by reading our [documentation](https://fastify.io)
+## Scripts
+
+| `pnpm run <script>` | Description                                                 |
+| ------------------- | ----------------------------------------------------------- |
+| `dev`               | To start develop the server, with hot reload by rollup      |
+| `build`             | To transpile only the app into `dist/index.js`              |
+| `start`             | Run the app based on the built server                       |
+
+---

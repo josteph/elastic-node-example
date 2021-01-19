@@ -1,21 +1,38 @@
 {
-  "name": "fastify-starter",
+  "name": "elastic-node-example",
   "version": "1.0.0",
   "description": "Get started using Fastify with this basic template.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node src/start.js",
-    "dev": "nodemon src/start.js",
-    "test": "tap --no-coverage  --no-esm"
+    "start": "node dist/index.js",
+    "build": "NODE_ENV=production rollup -c",
+    "dev": "rollup -c -w"
   },
   "dependencies": {
-    "fastify": "^2.10.0"
+    "fastify": "3.8.0",
+    "fastify-cookie": "4.1.0",
+    "fastify-cors": "4.1.0",
+    "fastify-helmet": "5.0.3",
+    "fastify-http-proxy": "4.0.4",
+    "fastify-plugin": "3.0.0",
+    "rollup": "^2.37.0"
   },
   "devDependencies": {
-    "tap": "^14.10.2",
-    "nodemon": "^2.0.1"
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-run": "^2.0.2",
+    "commitizen": "^4.0.3",
+    "compare-versions": "^3.5.1",
+    "cz-conventional-changelog": "^3.0.2",
+    "esbuild": "^0.8.33",
+    "husky": "^3.0.9",
+    "rollup-plugin-esbuild": "^2.6.1"
   },
-  "keywords": ["fastify", "node.js", "backend", "server", "http"],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "eslintConfig": {
     "sourceType": "script"
   }

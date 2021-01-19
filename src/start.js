@@ -1,12 +1,13 @@
-/* eslint strict:"off" */
-"use strict";
-
-const { build } = require("./build");
+import entry from './index';
 
 async function start() {
-  const app = build({ logger: true });
+  const app = entry({ 
+    logger: true,
+    disableRequestLogging: __PROD__,
+  });
+
   try {
-    await app.listen(8080);
+    await app.listen(3000, __PROD__ ? '0.0.0.0': '127.0.0.1');
   } catch (err) {
     app.log.error(err);
     process.exit(1);
