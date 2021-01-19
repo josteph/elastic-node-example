@@ -1,10 +1,13 @@
-import entry from './index';
+import { FastifyServerOptions, FastifyInstance } from 'fastify';
+import init from './index';
 
 async function start() {
-  const app = entry({ 
+  const opts: FastifyServerOptions = { 
     logger: true,
     disableRequestLogging: __PROD__,
-  });
+  };
+
+  const app: FastifyInstance = init(opts);
 
   try {
     await app.listen(3000, __PROD__ ? '0.0.0.0': '127.0.0.1');
