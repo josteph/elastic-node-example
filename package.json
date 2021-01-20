@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Get started using Fastify with this basic template.",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
     "start": "node dist/index.js",
     "build": "NODE_ENV=production rollup -c",
@@ -13,6 +12,7 @@
     "fastify": "3.8.0",
     "fastify-cookie": "4.1.0",
     "fastify-cors": "4.1.0",
+    "fastify-elasticsearch": "^2.0.0",
     "fastify-helmet": "5.0.3",
     "fastify-http-proxy": "4.0.4",
     "fastify-plugin": "3.0.0",

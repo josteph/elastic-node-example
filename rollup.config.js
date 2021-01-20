@@ -20,11 +20,10 @@ export default {
     esbuild({
       include: /\.[jt]sx?$/, // default, inferred from `loaders` option
       exclude: /node_modules/,
-      minify: process.env.NODE_ENV === 'production',
       target: 'es2015',
       // Like @rollup/plugin-replace
       define: {
-        __PROD__: process.env.NODE_ENV
+        __PROD__: process.env.NODE_ENV === 'production'
       },
       tsconfig: 'tsconfig.json',
       // Add extra loaders
