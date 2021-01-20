@@ -1,20 +1,36 @@
-const apiV1Routes = (app, opts, next) => {
-  app.get("/", async function(request, reply) {
-    return { hello: "world" };
-  });
-
-  app.get(
-    "/hello",
+const apiV1Routes = (ctx, opts, next) => {
+  ctx.get(
+    "/search",
     {
       query: {
-        name: {
+        q: {
           type: "string"
         }
       }
     },
     async function (request, reply) {
-      const { name } = request.query;
-      return { hello: name || "no name!" };
+      const { q } = request.query;
+
+      try {
+        const { body } = await ctx.elastic.search({
+          index: 'posts',
+          q: q || ''
+        });
+
+        const { hits } = body;
+
+        return {
+          result: hits.hits.map(r => r._source),
+          totalCount: hits.hits.length,
+        };
+      } catch (error) {
+        ctx.log.error(error);
+
+        return {
+          result: [],
+          totalCount: 0
+        };
+      }
     }
   );
 

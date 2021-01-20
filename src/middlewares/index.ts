@@ -3,6 +3,7 @@ import helmet from 'fastify-helmet';
 import cors from 'fastify-cors';
 import cookies from 'fastify-cookie';
 import elasticSearch from 'fastify-elasticsearch';
+import etlTask from './etl';
 import corsOptions from './corsOptions';
 
 const registerMiddleware = (app: FastifyInstance) => {
@@ -24,7 +25,8 @@ const registerMiddleware = (app: FastifyInstance) => {
       sniffInterval: 10000,
       suggestCompression: true,
       compression: 'gzip'
-    });
+    })
+    .register(etlTask);
 };
 
 export default registerMiddleware;

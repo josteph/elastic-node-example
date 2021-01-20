@@ -1,4 +1,5 @@
 dependencies:
+  cron: 1.8.2
   fastify: 3.8.0
   fastify-cookie: 4.1.0
   fastify-cors: 4.1.0
@@ -14,6 +15,7 @@ devDependencies:
   '@rollup/plugin-node-resolve': 11.1.0_rollup@2.37.0
   '@rollup/plugin-run': 2.0.2_rollup@2.37.0
   '@rollup/plugin-typescript': 8.1.0_d525163d707cba72c5ddee3255c70545
+  '@types/cron': 1.7.2
   commitizen: 4.2.3
   compare-versions: 3.6.0
   cz-conventional-changelog: 3.3.0
@@ -200,6 +202,13 @@ packages:
       rollup: ^1.20.0||^2.0.0
     resolution:
       integrity: sha512-TrBhfJkFxA+ER+ew2U2/fHbebhLT/l/2pRk0hfj9KusXUuRXd2v0R58AfaZK9VXDQ4TogOSEmICVrQAA3zFnHQ==
+  /@types/cron/1.7.2:
+    dependencies:
+      '@types/node': 14.14.22
+      moment: 2.29.1
+    dev: true
+    resolution:
+      integrity: sha512-AEpNLRcsVSc5AdseJKNHpz0d4e8+ow+abTaC0fKDbAU86rF1evoFF0oC2fV9FdqtfVXkG2LKshpLTJCFOpyvTg==
   /@types/estree/0.0.39:
     dev: true
     resolution:
@@ -216,6 +225,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-cHYfKsnwllYhjOzuC5q1VpguABBeecUp24yFluHpn/BQaVxB1CuQ1FSRZCzrPxrkIfWISXV2LbeoBthLWg0+0A==
+  /@types/node/14.14.22:
+    dev: true
+    resolution:
+      integrity: sha512-g+f/qj/cNcqKkc3tFqlXOYjrmZA+jNBiDzbP3kH+B+otKFqAdPgVTGP1IeKRdMml/aE69as5S4FqtxAbl+LaMw==
   /@types/normalize-package-data/2.4.0:
     dev: true
     resolution:
@@ -608,6 +621,12 @@ packages:
     optional: true
     resolution:
       integrity: sha512-pondGvTuVYDk++upghXJabWzL6Kxu6f26ljFw64Swq9v6sQPUL3EUlVDV56diOjpCayKihL6hVe8exIACU4XcA==
+  /cron/1.8.2:
+    dependencies:
+      moment-timezone: 0.5.32
+    dev: false
+    resolution:
+      integrity: sha512-Gk2c4y6xKEO8FSAUTklqtfSr7oTq0CiPQeLBG5Fl0qoXpZyMcj1SG59YL+hqq04bu6/IuEA7lMkYDAplQNKkyg==
   /cross-spawn/6.0.5:
     dependencies:
       nice-try: 1.0.5
@@ -1693,6 +1712,15 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-WRoDn//mXBiJ1H40rqa3vH0toePwSsGb45iInWlTySa+Uu4k3tYUSxa2v1KqAiLtvlrSzaExqS1gtk96A9zvEA==
+  /moment-timezone/0.5.32:
+    dependencies:
+      moment: 2.29.1
+    dev: false
+    resolution:
+      integrity: sha512-Z8QNyuQHQAmWucp8Knmgei8YNo28aLjJq6Ma+jy1ZSpSk5nyfRT8xgUbSQvD2+2UajISfenndwvFuH3NGS+nvA==
+  /moment/2.29.1:
+    resolution:
+      integrity: sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
   /ms/2.0.0:
     dev: true
     resolution:
@@ -2597,8 +2625,10 @@ specifiers:
   '@rollup/plugin-node-resolve': ^11.1.0
   '@rollup/plugin-run': ^2.0.2
   '@rollup/plugin-typescript': ^8.1.0
+  '@types/cron': ^1.7.2
   commitizen: ^4.0.3
   compare-versions: ^3.5.1
+  cron: ^1.8.2
   cz-conventional-changelog: ^3.0.2
   esbuild: ^0.8.33
   fastify: 3.8.0
