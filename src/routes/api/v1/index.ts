@@ -1,4 +1,4 @@
-const apiV1Routes = (ctx, opts, next) => {
+const apiV1Routes = (ctx, _opts, next) => {
   ctx.get(
     "/search",
     {
@@ -8,7 +8,7 @@ const apiV1Routes = (ctx, opts, next) => {
         }
       }
     },
-    async function (request, reply) {
+    async function (request) {
       const { q } = request.query;
 
       try {

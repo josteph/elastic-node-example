@@ -13,7 +13,7 @@
     "lib": ["es6", "es2015", "es2017", "dom"],
     "module": "esnext",
     "moduleResolution": "node",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noUnusedLocals": false,
