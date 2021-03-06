@@ -1,13 +1,17 @@
 import { FastifyServerOptions, FastifyInstance } from 'fastify';
 import init from './index';
 
-async function start() {
-  const opts: FastifyServerOptions = { 
-    logger: true,
-    disableRequestLogging: __PROD__,
-  };
+const opts: FastifyServerOptions = { 
+  logger: true,
+  disableRequestLogging: __PROD__,
+};
 
-  const app: FastifyInstance = init(opts);
+let app: FastifyInstance = init(opts);
+
+async function start() {
+  if (!app) {
+    app = init(opts);
+  }
 
   try {
     await app.listen(3000, __PROD__ ? '0.0.0.0': '127.0.0.1');
@@ -18,5 +22,6 @@ async function start() {
 }
 
 if (require.main === module) {
+  app.close();
   start();
 }

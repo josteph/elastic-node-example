@@ -6,7 +6,7 @@ dependencies:
   fastify-cors: 4.1.0
   fastify-elasticsearch: 2.0.0
   fastify-helmet: 5.0.3
-  fastify-http-proxy: 4.0.4
+  fastify-http-proxy: 4.3.1
   fastify-plugin: 3.0.0
   rollup: 2.37.0
 devDependencies:
@@ -940,14 +940,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-PLrmcRKMATmR/u613CSKsWyKy9n+Cnpr/uqv4uRTAkPdYGyE8yByZwE0E5cLJzIQHpfM0ba6aGPeYJMrGg5VnQ==
-  /fastify-http-proxy/4.0.4:
+  /fastify-http-proxy/4.3.1:
     dependencies:
-      fastify-reply-from: 3.5.0
-      fastify-websocket: 2.1.0
+      fastify-reply-from: 4.0.2
       ws: 7.4.2
     dev: false
     resolution:
-      integrity: sha512-wd4OKpxf5qO5q/sZdAE0Ml0KgcHQ8sBkBiEp/vA0jqA4Jjdnjd7/OkeT6w+H00CByJ2Do2Jsw66VDlE2OEv9wQ==
+      integrity: sha512-2awEQvxI64q8e4UQr4MxQgEhFfniGekP5fDScFoxahS8C0gnTgtT0AALWyNEHHvs4ylPcAMuwn7VtE/IFl19KA==
   /fastify-plugin/2.3.4:
     dependencies:
       semver: 7.3.4
@@ -958,7 +957,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ZdCvKEEd92DNLps5n0v231Bha8bkz1DjnPP/aEz37rz/q42Z5JVLmgnqR4DYuNn3NXAO3IDCPyRvgvxtJ4Ym4w==
-  /fastify-reply-from/3.5.0:
+  /fastify-reply-from/4.0.2:
     dependencies:
       end-of-stream: 1.4.4
       fastify-plugin: 3.0.0
@@ -971,19 +970,11 @@ packages:
     engines:
       node: '>=8.0.0'
     resolution:
-      integrity: sha512-kNc0taosEyZz1DZBo/Dt4ihxF210gqalhRAiKFKT0VvGCL/+3A1JunlY/ExeoJUyfiCUWpRJ87pj4FCdrhbZLA==
+      integrity: sha512-O7wP3IAOVt6fq8klznQmYK9bq6ues6LHthK0M2160LydD3RRRbCUhkOueYTRX20dCLXwGbAQmxpdKR+BE8qTTQ==
   /fastify-warning/0.2.0:
     dev: false
     resolution:
       integrity: sha512-s1EQguBw/9qtc1p/WTY4eq9WMRIACkj+HTcOIK1in4MV5aFaQC9ZCIt0dJ7pr5bIf4lPpHvAtP2ywpTNgs7hqw==
-  /fastify-websocket/2.1.0:
-    dependencies:
-      fastify-plugin: 3.0.0
-      find-my-way: 3.0.5
-      ws: 7.4.2
-    dev: false
-    resolution:
-      integrity: sha512-u5zClCarOHctvzKq76Gc0rDwtWfU7pw+JGYETfSu77YzZ/uzXLDX4jB70vLliUc3nqK0zXFRDK2/KnEnfdF9Kw==
   /fastify/3.8.0:
     dependencies:
       abstract-logging: 2.0.1
@@ -2654,7 +2645,7 @@ specifiers:
   fastify-cors: 4.1.0
   fastify-elasticsearch: ^2.0.0
   fastify-helmet: 5.0.3
-  fastify-http-proxy: 4.0.4
+  fastify-http-proxy: 4.3.1
   fastify-plugin: 3.0.0
   husky: ^3.0.9
   rollup: ^2.37.0
